@@ -125,5 +125,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/SFIS.dir/DependInfo.cmake"
+  "CMakeFiles/BSUIR_SFIS.dir/DependInfo.cmake"
   )

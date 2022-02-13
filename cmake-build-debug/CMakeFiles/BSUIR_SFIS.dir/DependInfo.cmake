@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/vladimir/Desktop/BSUIR_SFIS/main.cpp" "CMakeFiles/SFIS.dir/main.cpp.o" "gcc" "CMakeFiles/SFIS.dir/main.cpp.o.d"
+  "/Users/glebchanskiy/Desktop/subjects/TMOIC/BSUIR_SFIS/main.cpp" "CMakeFiles/BSUIR_SFIS.dir/main.cpp.o" "gcc" "CMakeFiles/BSUIR_SFIS.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links.

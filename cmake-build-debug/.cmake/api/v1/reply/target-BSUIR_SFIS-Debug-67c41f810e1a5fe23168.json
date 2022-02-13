@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "SFIS"
+			"path" : "BSUIR_SFIS"
 		}
 	],
 	"backtrace" : 1,
@@ -35,7 +35,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15"
+					"fragment" : "-g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk"
 				},
 				{
 					"fragment" : "-std=gnu++14"
@@ -56,7 +56,7 @@
 			]
 		}
 	],
-	"id" : "SFIS::@6890427a1f51a3e7e1df",
+	"id" : "BSUIR_SFIS::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -72,8 +72,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "SFIS",
-	"nameOnDisk" : "SFIS",
+	"name" : "BSUIR_SFIS",
+	"nameOnDisk" : "BSUIR_SFIS",
 	"paths" : 
 	{
 		"build" : ".",

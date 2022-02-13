@@ -54,16 +54,16 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/vladimir/Desktop/BSUIR_SFIS
+CMAKE_SOURCE_DIR = /Users/glebchanskiy/Desktop/subjects/TMOIC/BSUIR_SFIS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/vladimir/Desktop/BSUIR_SFIS/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/glebchanskiy/Desktop/subjects/TMOIC/BSUIR_SFIS/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/SFIS.dir/all
+all: CMakeFiles/BSUIR_SFIS.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/SFIS.dir/clean
+clean: CMakeFiles/BSUIR_SFIS.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/SFIS.dir
+# Target rules for target CMakeFiles/BSUIR_SFIS.dir
 
 # All Build rule for target.
-CMakeFiles/SFIS.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFIS.dir/build.make CMakeFiles/SFIS.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFIS.dir/build.make CMakeFiles/SFIS.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/vladimir/Desktop/BSUIR_SFIS/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target SFIS"
-.PHONY : CMakeFiles/SFIS.dir/all
+CMakeFiles/BSUIR_SFIS.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BSUIR_SFIS.dir/build.make CMakeFiles/BSUIR_SFIS.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BSUIR_SFIS.dir/build.make CMakeFiles/BSUIR_SFIS.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/glebchanskiy/Desktop/subjects/TMOIC/BSUIR_SFIS/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target BSUIR_SFIS"
+.PHONY : CMakeFiles/BSUIR_SFIS.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/SFIS.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/Desktop/BSUIR_SFIS/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SFIS.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/Desktop/BSUIR_SFIS/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/SFIS.dir/rule
+CMakeFiles/BSUIR_SFIS.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/glebchanskiy/Desktop/subjects/TMOIC/BSUIR_SFIS/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/BSUIR_SFIS.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/glebchanskiy/Desktop/subjects/TMOIC/BSUIR_SFIS/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/BSUIR_SFIS.dir/rule
 
 # Convenience name for target.
-SFIS: CMakeFiles/SFIS.dir/rule
-.PHONY : SFIS
+BSUIR_SFIS: CMakeFiles/BSUIR_SFIS.dir/rule
+.PHONY : BSUIR_SFIS
 
 # clean rule for target.
-CMakeFiles/SFIS.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFIS.dir/build.make CMakeFiles/SFIS.dir/clean
-.PHONY : CMakeFiles/SFIS.dir/clean
+CMakeFiles/BSUIR_SFIS.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BSUIR_SFIS.dir/build.make CMakeFiles/BSUIR_SFIS.dir/clean
+.PHONY : CMakeFiles/BSUIR_SFIS.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

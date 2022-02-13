@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.21)
-project(SFIS)
+project(BSUIR_SFIS)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(SFIS main.cpp)
+add_executable(BSUIR_SFIS main.cpp)

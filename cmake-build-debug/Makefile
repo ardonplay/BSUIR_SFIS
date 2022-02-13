@@ -57,10 +57,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/vladimir/Desktop/BSUIR_SFIS
+CMAKE_SOURCE_DIR = /Users/glebchanskiy/Desktop/subjects/TMOIC/BSUIR_SFIS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/vladimir/Desktop/BSUIR_SFIS/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/glebchanskiy/Desktop/subjects/TMOIC/BSUIR_SFIS/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/Desktop/BSUIR_SFIS/cmake-build-debug/CMakeFiles /Users/vladimir/Desktop/BSUIR_SFIS/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/glebchanskiy/Desktop/subjects/TMOIC/BSUIR_SFIS/cmake-build-debug/CMakeFiles /Users/glebchanskiy/Desktop/subjects/TMOIC/BSUIR_SFIS/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/Desktop/BSUIR_SFIS/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/glebchanskiy/Desktop/subjects/TMOIC/BSUIR_SFIS/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named SFIS
+# Target rules for targets named BSUIR_SFIS
 
 # Build rule for target.
-SFIS: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SFIS
-.PHONY : SFIS
+BSUIR_SFIS: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BSUIR_SFIS
+.PHONY : BSUIR_SFIS
 
 # fast build rule for target.
-SFIS/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFIS.dir/build.make CMakeFiles/SFIS.dir/build
-.PHONY : SFIS/fast
+BSUIR_SFIS/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BSUIR_SFIS.dir/build.make CMakeFiles/BSUIR_SFIS.dir/build
+.PHONY : BSUIR_SFIS/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFIS.dir/build.make CMakeFiles/SFIS.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BSUIR_SFIS.dir/build.make CMakeFiles/BSUIR_SFIS.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -142,7 +142,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFIS.dir/build.make CMakeFiles/SFIS.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BSUIR_SFIS.dir/build.make CMakeFiles/BSUIR_SFIS.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -150,7 +150,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SFIS.dir/build.make CMakeFiles/SFIS.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BSUIR_SFIS.dir/build.make CMakeFiles/BSUIR_SFIS.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -161,7 +161,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... SFIS"
+	@echo "... BSUIR_SFIS"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

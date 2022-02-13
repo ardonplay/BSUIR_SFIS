@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "SFIS",
+					"name" : "BSUIR_SFIS",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "SFIS::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SFIS-Debug-cc734151a489d0d51cb3.json",
-					"name" : "SFIS",
+					"id" : "BSUIR_SFIS::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BSUIR_SFIS-Debug-67c41f810e1a5fe23168.json",
+					"name" : "BSUIR_SFIS",
 					"projectIndex" : 0
 				}
 			]
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/vladimir/Desktop/BSUIR_SFIS/cmake-build-debug",
-		"source" : "/Users/vladimir/Desktop/BSUIR_SFIS"
+		"build" : "/Users/glebchanskiy/Desktop/subjects/TMOIC/BSUIR_SFIS/cmake-build-debug",
+		"source" : "/Users/glebchanskiy/Desktop/subjects/TMOIC/BSUIR_SFIS"
 	},
 	"version" : 
 	{
