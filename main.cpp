@@ -58,12 +58,10 @@ int main() {
            "\nСимметрическая разность - 5"
            "\nДополнение графика A - 6"
            "\nДополнение графика B - 7"
-           "\nДекартово произведение AxB - 8"
-           "\nДекартово произведение BxA - 9"
-           "\nИнверсия графика А - 10"
-           "\nИнверсия графика B - 11"
-           "\nКомпозиция А и B - 12"
-           "\nКомпозиция B и A - 13"
+           "\nИнверсия графика А - 8"
+           "\nИнверсия графика B - 9"
+           "\nКомпозиция А и B - 10"
+           "\nКомпозиция B и A - 11"
         << endl;
     cout<< ">>> ";
     cin>> choose;
@@ -274,67 +272,7 @@ int main() {
 
             break;
         }
-
         case 8 : {
-            // Eсли пользователь выбирает операцию Декартово произведение
-            vector<pair<pair<int, int>, pair<int, int>>> arr_C;  //Создается пустой график C
-            pair<pair<int, int>, pair<int, int>> cyber_point;
-            for (auto i: arr_A) {                                //Выбираем первый элемент графика A
-                for (auto j: arr_B) {                            //Выбираем первый элемент графика B
-                    cyber_point.first = i;                       //Записываем выбранный элемент A и выбранный элемент B в кортеж, который записываем в C
-                    cyber_point.second = j;
-
-                    arr_C.push_back(cyber_point);
-                }
-            }
-
-            //C-результат декартового произведения графиков A*B
-            cout << "Декартово произведение A x B = ";
-            cout << "{";
-            for (auto it: arr_C) {
-
-                if (it == arr_C.back())
-                    cout << "<<" << it.first.first << "," << it.first.second << ">" << "," <<
-                         "<" << it.second.first << "," << it.second.second << ">>";
-                else
-                    cout << "<<" << it.first.first << "," << it.first.second << ">" << "," <<
-                         "<" << it.second.first << "," << it.second.second << ">>" << ", ";
-            }
-            cout << "}";
-
-            break;
-        }
-
-        case 9 : {
-            // Eсли пользователь выбирает операцию декартово произведение B*A
-            vector<pair<pair<int, int>, pair<int, int>>> arr_C;  //Создается пустой график C
-            pair<pair<int, int>, pair<int, int>> cyber_point;
-            for (auto i: arr_B) {                                //Выбираем первый элемент графика B
-                for (auto j: arr_A) {                            //Выбираем первый элемент графика A
-                    cyber_point.first = i;                       //Записываем выбранный элемент B и выбранный элемент A в кортеж, который записываем в C
-                    cyber_point.second = j;
-
-                    arr_C.push_back(cyber_point);
-                }
-            }
-
-            //C-результат декартового произведения графиков A и B
-            cout << "Декартово произведение B x A = ";
-            cout << "{";
-            for (auto it: arr_C) {
-
-                if (it == arr_C.back())
-                    cout << "<<" << it.first.first << "," << it.first.second << ">" << "," <<
-                         "<" << it.second.first << "," << it.second.second << ">>";
-                else
-                    cout << "<<" << it.first.first << "," << it.first.second << ">" << "," <<
-                         "<" << it.second.first << "," << it.second.second << ">>" << ", ";
-            }
-            cout << "}";
-
-            break;
-        }
-        case 10 : {
             // Eсли пользователь выбирает операцию инверсии A
             vector<pair<int, int>> arr_C;     // Создается пустой график C
 
@@ -358,7 +296,7 @@ int main() {
             break;
         }
 
-        case 11 : {
+        case 9 : {
             // Eсли пользователь выбирает операцию инверсии B
             vector<pair<int, int>> arr_C;                // Создается пустой график C
 
@@ -382,7 +320,7 @@ int main() {
             break;
         }
 
-        case 12 : {
+        case 10 : {
             // Eсли пользователь выбирает операцию композиции
             vector<pair<int, int>> arr_C;                       // Создается пустой график C
 
@@ -418,7 +356,7 @@ int main() {
             break;
         }
 
-        case 13 : {
+        case 11 : {
             // Eсли пользователь выбирает операцию композиции
             vector<pair<int, int>> arr_C;                       // Создается пустой график C
 
