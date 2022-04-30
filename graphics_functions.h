@@ -12,7 +12,7 @@ using namespace std;
 
 void fulling_graphic(vector<pair<int,int>> &graphic);
 
-void print(vector<pair<int,int>> graphic);
+void print(vector<pair<int,int>> &graphic);
 
 vector<pair<int,int>> cross(vector<pair<int,int>> &graphic_A, vector<pair<int,int>> &graphic_B);
 

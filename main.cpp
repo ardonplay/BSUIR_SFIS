@@ -3,7 +3,7 @@
 
 using namespace std;
 
-vector<pair<int,int>> getUni() {
+vector<pair<int,int>> getGraphicUni() {
     // заполнение универсума
     vector<pair<int,int>> uni;
     pair<int,int> point;
@@ -19,6 +19,18 @@ vector<pair<int,int>> getUni() {
     return uni;
 }
 
+vector<int> getSetUni() {
+    // заполнение универсума
+    vector<int> uni;
+
+
+    uni.reserve(201);
+    for (int i = -100; i<101; i++) {
+        uni.push_back(i);
+    }
+    return uni;
+}
+
 
 int main() {
     int choose;
@@ -27,7 +39,7 @@ int main() {
     vector<pair<int,int>> graphic_B;
     vector<pair<int,int>> uni;
 
-    uni = getUni();
+    uni = getGraphicUni();
 
 
     fulling_graphic(graphic_A);
