@@ -4,12 +4,46 @@
 
 #include "graphics_functions.h"
 
+vector<pair<int,int>> getGraphicUni() {
+    // заполнение универсума
+    vector<pair<int,int>> uni;
+    pair<int,int> point;
+
+    uni.reserve(201);
+    for (int i = -100; i<101; i++) {
+        for (int j = -100; j < 101; j++) {
+            point.first = i;
+            point.second = j;
+            uni.push_back(point);
+        }
+    }
+    return uni;
+}
+
 void fulling_graphic(vector<pair<int,int>> &graphic) {
-    // Пользователь вводит мощность графика А
+    // Пользователь вводит мощность графика
     int size;
     pair<int,int> point;
 
-    cout << endl << "Введите мощность графика А:\n>>> ";
+    cout << endl << "Введите мощность графика:\n>>> ";
+    cin >> size;
+    graphic.reserve(size);
+
+    //Пользователь вводит элементы графика
+    for (int i = 0; i < size; i++) {
+        cout << "Введите " << i + 1 << " элемент графика: ";
+        cin >> point.first >> point.second;
+        graphic.push_back(point);
+    }
+}
+
+
+void fulling_graphic(vector<pair<int,int>> &graphic, char name) {
+    // Пользователь вводит мощность графика
+    int size;
+    pair<int,int> point;
+
+    cout << endl << "Введите мощность графика: " << name << "\n>>> ";
     cin >> size;
     graphic.reserve(size);
 
@@ -23,7 +57,7 @@ void fulling_graphic(vector<pair<int,int>> &graphic) {
 
 
 void print(vector<pair<int,int>> graphic) {
-    cout << endl << "график C = {";
+    cout << "{";
     for (auto it: graphic) {
         if (it == graphic.back())
             cout << "<" << it.first << "," << it.second << ">";
@@ -32,6 +66,17 @@ void print(vector<pair<int,int>> graphic) {
     }
     cout << "}";
 }
+
+//void print(vector<pair<int,int>> graphic, string output) {
+//    cout << output << " = {";
+//    for (auto it: graphic) {
+//        if (it == graphic.back())
+//            cout << "<" << it.first << "," << it.second << ">";
+//        else
+//            cout << "<" << it.first << "," << it.second << ">" << ", ";
+//    }
+//    cout << "}" << endl;
+//}
 
 
 vector<pair<int,int>> cross(vector<pair<int,int>> &graphic_A, vector<pair<int,int>> &graphic_B) {
@@ -67,9 +112,8 @@ vector<pair<int,int>> unite(vector<pair<int,int>> &graphic_A, vector<pair<int,in
     return graphic_C;
 }
 
-
 vector<pair<int,int>> difference(vector<pair<int,int>> &graphic_A, vector<pair<int,int>> &graphic_B) {
-    vector<pair<int, int>> graphic_C;           //Создается пустой график C.
+    vector<pair<int, int>> graphic_C;        // Создается пустой график C.
 
     for (auto i: graphic_A) {                   // Выбираем элемент графика А.
         for (auto j: graphic_B) {               // Выбираем элемент графика В.
@@ -80,8 +124,22 @@ vector<pair<int,int>> difference(vector<pair<int,int>> &graphic_A, vector<pair<i
                 break;
         }
     }
+
     return graphic_C;
 }
+
+vector<pair<int,int>> sim_difference(vector<pair<int,int>> &graphic_A, vector<pair<int,int>> &graphic_B) {     //Создается пустой график C.
+    vector<pair<int, int>> set_C;           //Создается пустой график C.
+    vector<pair<int, int>> T1;
+    vector<pair<int, int>> T2;
+
+    T1 = difference(graphic_A, graphic_B);
+    T2 = difference(graphic_B, graphic_A);
+    set_C  = unite(T1,T2);
+    return set_C;
+}
+
+
 
 vector<pair<int,int>> addition(vector<pair<int,int>> &graphic, vector<pair<int,int>> &uni) {
     vector<pair<int, int>> graphic_C;           //Создается пустой график C.

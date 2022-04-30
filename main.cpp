@@ -1,169 +1,130 @@
 #include <iostream>
 #include "graphics_functions.h"
+#include "sets_functions.h"
+#include "Match.h"
 
 using namespace std;
-
-vector<pair<int,int>> getGraphicUni() {
-    // заполнение универсума
-    vector<pair<int,int>> uni;
-    pair<int,int> point;
-
-    uni.reserve(201);
-    for (int i = -100; i<101; i++) {
-        for (int j = -100; j < 101; j++) {
-            point.first = i;
-            point.second = j;
-            uni.push_back(point);
-        }
-    }
-    return uni;
-}
-
-vector<int> getSetUni() {
-    // заполнение универсума
-    vector<int> uni;
-
-
-    uni.reserve(201);
-    for (int i = -100; i<101; i++) {
-        uni.push_back(i);
-    }
-    return uni;
-}
 
 
 int main() {
     int choose;
 
-    vector<pair<int,int>> graphic_A;
-    vector<pair<int,int>> graphic_B;
-    vector<pair<int,int>> uni;
+    Match A;
+    Match B;
+    Match uni;
 
-    uni = getGraphicUni();
+    uni = getMatchUni();
 
+    cout << "Заполнение соответствия A:";
+    fulling_match(A);
+    cout << endl;
+    cout << "Заполнение соответствия B:" << endl;
+    fulling_match(B);
 
-    fulling_graphic(graphic_A);
-    fulling_graphic(graphic_B);
+    cout << endl;
+    cout << "Соответствие A = <X,Y,G>, где:" << endl;
+    print(A); cout << endl;
+
+    cout << "Соответствие B = <X,Y,G>, где:" << endl;
+    print(B); cout << endl;
 
     cout<< endl;
 
     // Пользователь выбирает какую операцию над графиками выполнить
     cout<< "Выберите действие:"
-           "\nПересечние графиков - 1"
-           "\nОбъдинение графиков - 2"
+           "\nПересечение - 1"
+           "\nОбъединение - 2"
            "\nРазность A\\B - 3"
            "\nРазность B\\A - 4"
            "\nСимметрическая разность - 5"
-           "\nДополнение графика A - 6"
-           "\nДополнение графика B - 7"
-           "\nИнверсия графика А - 8"
-           "\nИнверсия графика B - 9"
+           "\nДополнение A - 6"
+           "\nДополнение B - 7"
+           "\nИнверсия А - 8"
+           "\nИнверсия B - 9"
            "\nКомпозиция А и B - 10"
            "\nКомпозиция B и A - 11"
+           "\nСужение А - 12"
+           "\nСужение B - 13"
         << endl;
     cout<< ">>> ";
     cin>> choose;
 
     // далее идут сами операции
+    Match C;
     switch (choose) {
 
         case 1 : {
-            vector<pair<int,int>> C;
-            C = cross(graphic_A,graphic_B);
-            print(C);
+            C = cross(A, B);
             break;
         }
 
         case 2 : {
-            // Eсли пользователь выбирает операцию объединения
-            vector<pair<int, int>> C;        // Создается пустой график C.
-            C = unite(graphic_A, graphic_B);
-            print(C);
+            C = unite(A, B);
             break;
         }
 
         case 3 : {
-            // Eсли пользователь выбирает операцию разности
-            vector<pair<int, int>> C;           //Создается пустой график C.
-            C = difference(graphic_A, graphic_B);
-            print(C);
+            C = difference(A, B);
             break;
         }
 
         case 4 : {
-            // Eсли пользователь выбирает операцию разности
-            vector<pair<int, int>> C;           //Создается пустой график C.
-            C = difference(graphic_B, graphic_A);
-            print(C);
+            C = difference(B, A);
             break;
         }
 
         case 5 : {
-            // Eсли пользователь выбирает операцию разности
-            vector<pair<int, int>> C;                   //Создается пустой график G.
-            vector<pair<int, int>> T1;
-            vector<pair<int, int>> T2;
-
-            T1 = difference(graphic_A, graphic_B);
-            T2 = difference(graphic_B, graphic_A);
-            C  = unite(T1,T2);
-
-            print(C);
+            C = sim_difference(A, B);
             break;
         }
 
         case 6 : {
-            // Eсли пользователь выбирает операцию дополнения
-            vector<pair<int, int>> C;           //Создается пустой график C.
-            C = addition(graphic_A, uni);
-            print(C);
+            C = addition(A, uni);
             break;
         }
 
         case 7 : {
-            // Eсли пользователь выбирает операцию дополнения
-            vector<pair<int, int>> C;           //Создается пустой график C.
-            C = addition(graphic_B, uni);
-            print(C);
+            C = addition(B, uni);
             break;
         }
         case 8 : {
-            // Eсли пользователь выбирает операцию инверсии A
-            vector<pair<int, int>> C;     // Создается пустой график C
-            C = inversion(graphic_A);
-            print(C);
+            C = inversion(A);
             break;
         }
 
         case 9 : {
-            // Eсли пользователь выбирает операцию инверсии A
-            vector<pair<int, int>> C;     // Создается пустой график C
-            C = inversion(graphic_B);
-            print(C);
+            C = inversion(B);
             break;
         }
 
         case 10 : {
-            // Eсли пользователь выбирает операцию композиции
-            vector<pair<int, int>> C;
-            C = composition(graphic_A, graphic_B);
-            print(C);
+            C = composition(A, B);
             break;
         }
 
         case 11 : {
-            // Eсли пользователь выбирает операцию композиции
-            vector<pair<int, int>> C;
-            C = composition(graphic_B, graphic_A);
-            print(C);
+            C = composition(B, A);
             break;
         }
 
+        case 12 : {
+            C = narrowing(A);
+            break;
+        }
+
+        case 13 : {
+            C = narrowing(B);
+            break;
+        }
         default:
             cout << "Неправильное значение!";
     }
 
-    // завершение программы
+    cout << endl;
+    cout << "Соответствие С = <X,Y,G>, где:" << endl;
+    print(C); cout << endl;
+
+
     cout << endl << endl << "Программа завершена.";
 
     return 0;

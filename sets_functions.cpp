@@ -4,10 +4,39 @@
 
 #include "sets_functions.h"
 
+vector<int> getSetUni() {
+    // заполнение универсума
+    vector<int> uni;
+
+
+    uni.reserve(201);
+    for (int i = -100; i<101; i++) {
+        uni.push_back(i);
+    }
+    return uni;
+}
+
+
 void fulling_set(vector<int> &set) {
     // Пользователь вводит мощность графика А
     int size, element;
-    cout << endl << "Введите мощность графика А:\n>>> ";
+    cout << endl << "Введите мощность множества:\n>>> ";
+    cin >> size;
+    set.reserve(size);
+
+    //Пользователь вводит элементы графика
+    for (int i = 0; i < size; i++) {
+        cout << "Введите " << i + 1 << " элемент множества: ";
+        cin >> element;
+        set.push_back(element);
+    }
+}
+
+
+void fulling_set(vector<int> &set, char name) {
+    // Пользователь вводит мощность графика А
+    int size, element;
+    cout << endl << "Введите мощность множества "<< name << ":\n>>> ";
     cin >> size;
     set.reserve(size);
 
@@ -21,7 +50,7 @@ void fulling_set(vector<int> &set) {
 
 
 void print(vector<int> set) {
-    cout << endl << "график C = {";
+    cout << "{";
     for (auto it: set) {
         if (it == set.back())
             cout << it;
@@ -30,6 +59,17 @@ void print(vector<int> set) {
     }
     cout << "}";
 }
+
+//void print(vector<int> set, string output) {
+//    cout << output << " = {";
+//    for (auto it: set) {
+//        if (it == set.back())
+//            cout << it;
+//        else
+//            cout << it << ", ";
+//    }
+//    cout << "}" << endl;
+//}
 
 
 vector<int> cross(vector<int> &set_A, vector<int> &set_B) {
@@ -81,6 +121,17 @@ vector<int> difference(vector<int> &set_A, vector<int> &set_B) {
     return set_C;
 }
 
+vector<int> sim_difference(vector<int> &set_A, vector<int> &set_B) {
+    vector<int> set_C;           //Создается пустой график C.
+    vector<int> T1;
+    vector<int> T2;
+
+    T1 = difference(set_A, set_B);
+    T2 = difference(set_B, set_A);
+    set_C  = unite(T1,T2);
+    return set_C;
+}
+
 vector<int> addition(vector<int> &set, vector<int> &uni) {
     vector<int> set_C;           //Создается пустой график C.
 
@@ -91,6 +142,20 @@ vector<int> addition(vector<int> &set, vector<int> &uni) {
                     set_C.push_back(i);     // то добавляем элемент графика uni в массив С
             } else
                 break;
+        }
+    }
+    return set_C;
+}
+
+vector<pair<int,int>> decart(vector<int> &set_A, vector<int> &set_B) {
+    vector<pair<int,int>> set_C;
+    pair<int,int> point;
+
+    for (auto i : set_A) {
+        for (auto j : set_B) {
+            point.first = i;
+            point.second = j;
+            set_C.push_back(point);
         }
     }
     return set_C;
