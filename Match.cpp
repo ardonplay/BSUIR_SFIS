@@ -83,9 +83,11 @@ Match narrowing(Match set) {
     vector<int> T2;
     vector<pair<int,int>> TT;
 
-    cout << "Заполните новую область отправления." << endl;
-    fulling_set(T1);
-    cout << "Заполните новую область прибытия." << endl;
+    cout << endl;
+
+    cout << "Заполните новую область отправления";
+    fulling_set(T1); cout << endl;
+    cout << "Заполните новую область прибытия";
     fulling_set(T2);
 
     TT = decart(T1,T2);
