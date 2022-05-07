@@ -36,6 +36,12 @@ Match composition(Match A, Match B);
 
 Match narrowing(Match set);
 
+Match ToBeContinued(Match set);
+
+vector<int> image(Match set);
+
+vector<int> preimage(Match set);
+
 void print(Match set);
 
 

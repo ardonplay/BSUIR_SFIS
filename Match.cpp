@@ -98,6 +98,65 @@ Match narrowing(Match set) {
     return C;
 }
 
+
+Match ToBeContinued(Match set) {
+    Match C;
+
+    vector<pair<int,int>> H;
+
+    cout << endl;
+
+    cout << "Заполните новый график";
+    fulling_graphic(H); cout << endl;
+
+
+    H = unite(H,set.G);
+
+    C.X = set.X;
+    C.Y = set.Y;
+    C.G = H;
+    return C;
+}
+
+vector<int> image(Match set) {
+    vector<int> M;
+    vector<int> AM;
+
+    cout << endl;
+
+    cout << "Заполните множество M";
+    fulling_set(M); cout << endl;
+
+    for (auto i : set.G) {
+        for (auto &j : M) {
+            if (i.first == j) {
+                AM.push_back(i.second);
+            }
+        }
+    }
+    return AM;
+}
+
+vector<int> preimage(Match set) {
+    vector<int> M;
+    vector<int> AM;
+
+    cout << endl;
+
+    cout << "Заполните множество N";
+    fulling_set(M); cout << endl;
+
+    for (auto i : set.G) {
+        for (auto &j : M) {
+            if (i.second == j) {
+                AM.push_back(i.first);
+            }
+        }
+    }
+    return AM;
+}
+
+
 void print(Match set) {
     cout << "X="; print(set.X); cout << endl;
     cout << "Y="; print(set.Y); cout << endl;
