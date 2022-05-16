@@ -11,9 +11,6 @@ int main() {
     Match B;
     Match uni;
 
-    // задаём универсум
-    uni = getMatchUni();
-
     // задаём соответствие А
     cout << "Заполнение соответствия A:";
     fulling_match(A);
@@ -92,13 +89,13 @@ int main() {
 
         case 6 : {
             // дополнение
-            C = addition(A, uni);
+            C = addition(A);
             break;
         }
 
         case 7 : {
             // дополнение
-            C = addition(B, uni);
+            C = addition(B);
             break;
         }
         case 8 : {
@@ -193,7 +190,8 @@ int main() {
 
     cout << endl;
     cout << "Соответствие С = <X,Y,G>, где:" << endl;
-    print(C); cout << endl;
+    print(C);
+    cout << endl;
 
 
     cout << endl << endl << "Программа завершена.";

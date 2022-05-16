@@ -51,11 +51,13 @@ Match sim_difference(Match A, Match B) {
     return C;
 }
 
-Match addition(Match A, Match uni) {
+Match addition(Match A) {
     Match C;
-    C.X = addition(A.X,uni.X);
-    C.Y = addition(A.Y,uni.Y);
-    C.G = addition(A.G,uni.G);
+    C.X = A.X;
+    C.Y = A.Y;
+    vector<pair<int,int>> uni;
+    uni = decart(A.X, A.Y);
+    C.G = addition(A.G,uni);
     return C;
 }
 

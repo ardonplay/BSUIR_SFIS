@@ -28,7 +28,7 @@ Match difference(Match A, Match B);
 
 Match sim_difference(Match A, Match B);
 
-Match addition(Match A, Match uni);
+Match addition(Match A);
 
 Match inversion(Match set);
 
